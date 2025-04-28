@@ -59,7 +59,7 @@ nav a:hover {
   }
 
 body {
-    background-image: radial-gradient(circle, #ffbb00, #ff0000);
+    background-image: radial-gradient(circle, #ffffff, #000000);
 }
 footer {
     display: flex;
@@ -69,6 +69,8 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
     padding: 20px 0;
+    border: #000000 3px solid;
+    border-radius: 10px;
 }
 
 .main-container {
@@ -269,6 +271,9 @@ h1 {
     height: 120px;
     margin-right: 10px;
     display: flex;
+    padding: none;
+    border: #000000 2px solid;
+    border-radius: 5px;
 }
 
 h2 h3 {
@@ -332,7 +337,7 @@ h2 h3 {
 .main-container1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 250px 1fr 1fr 1fr;
+    grid-template-rows: 200px 1fr 1fr 1fr;
     grid-template-areas:
         "section1p2 section1p2 section1p2 section1p2 section1p2 section1p2"
         "section1p2 section1p2 section1p2 section1p2 section1p2 section1p2"
@@ -383,11 +388,11 @@ h2 h3 {
     padding: 20px;
     height: auto;
     min-height: 200px;
+    border:#000000 3px solid;
 }
 
 .section2p2 {
     grid-area: section2p2;
-    background-image: radial-gradient(circle, #0037ff, #ffffff);
     padding: 20px;
     height: auto;
     min-height: 200px;
@@ -395,15 +400,53 @@ h2 h3 {
 
 .section3p2 {
     grid-area: section3p2;
-    background: #d0d0d0;
-    background-image: linear-gradient(to right, #ffffff, #0d00ff);
-    background-size: cover;
-    background-position: center;
+    position: relative;
     padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
     height: auto;
     min-height: 200px;
-
+    background:rgba(0, 0, 0, 0.3);
+    border:#000000 3px solid;
+    border-radius: 10px;
+    
 }
+
+.section3p2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/section3background.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.section3p2 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: bold;
+    color: #ffffff;
+    text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    line-height: 1.5;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .section4p2 {
     grid-area: section4p2;
     position: relative;
@@ -535,28 +578,66 @@ h2 h3 {
 
 .section2p2s1 {
     grid-area: section2p2s1;
+    position: relative;
     padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    height: auto;
+    min-height: 200px;
+    background:rgba(0, 0, 0, 0.3);
     border:#000000 3px solid;
     border-radius: 10px;
-    background-image: url(assets/smoocave.jpg);
+    
+}
+
+.section2p2s1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/smoocave.jpg");
     background-size: cover;
     background-position: center;
-    padding: 20px;
-    height: auto;
-    cursor: pointer;
+    z-index: -1;
 }
 
 .section2p2s2 {
     grid-area: section2p2s2;
+    position: relative;
     padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    height: auto;
+    min-height: 200px;
+    background:rgba(0, 0, 0, 0.3);
     border:#000000 3px solid;
     border-radius: 10px;
-    background-image: url(assets/wailingwidow.jpg);
+    
+}
+
+.section2p2s2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/wailingwidow.jpg");
     background-size: cover;
     background-position: center;
-    padding: 20px;
-    height: auto;
-    cursor: pointer;
+    z-index: -1;
 }
 
 .section5 a {
@@ -583,4 +664,29 @@ h2 h3 {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     font-size: 24px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    min-height: 50vh;
+}
+
+.gallery-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 10px;
+    border: #000000 3px solid;
+}
+
+.gallery-image:nth-child(odd) {
+    border-style: double;
+    border-color: #040cf1;
 }
