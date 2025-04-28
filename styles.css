@@ -408,7 +408,6 @@ h2 h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    cursor: pointer;
     height: auto;
     min-height: 200px;
     background:rgba(0, 0, 0, 0.3);
@@ -689,4 +688,17 @@ h2 h3 {
 .gallery-image:nth-child(odd) {
     border-style: double;
     border-color: #040cf1;
+}
+
+#maincontent2 h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: #2c44ff;
+    text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    margin-bottom: 20px;
+    text-align: center;
 }

@@ -45,10 +45,10 @@
                 <p>The Useful Links section provides visitors with quick access to helpful resources for planning their North Coast 500 adventure. Whether you're looking for accommodation options, recommended restaurants, local attractions, or detailed route maps, these links are curated to make your journey as smooth and memorable as possible. From official travel guides to hidden gems shared by locals, you'll find everything you need to explore the stunning landscapes, historic sites, and charming towns along Scotland’s most iconic road trip.</p>
             </div>
             </div>
-            <div class="section5">
+            <div class="section5" id="clickable-div6">
                <a href="activities.html">Things to do</a>
             </div>
-            <div class="section6">
+            <div class="section6" id="clickable-div7">
                 <a href="gallery.html">Gallery</a>
             </div>
         </div>
@@ -56,6 +56,14 @@
         <footer>
             <p>&copy; AX designs</p>
         </footer>
+        <script>
+            document.getElementById('clickable-div6').addEventListener('click', function() {
+                window.location.href = 'activities.html';
+            });
+            document.getElementById('clickable-div7').addEventListener('click', function() {
+                window.location.href = 'gallery.html';
+            });
+        </script>
     </body>
 
     </html>
